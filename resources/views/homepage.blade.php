@@ -4,13 +4,14 @@
 
 @section('page-content')
 
-    <h1>Welcome to the Site</h1>
-    <br>
-    {{-- <a href="{{ route('logout') }}">Logout</a> --}}
-    <form action="{{ route('logout') }}">
-        @csrf
-        <button type="submit">
-            Logout
-        </button>
-    </form>
+    <div class="container text-center">
+        <h1 class="my-4">Welcome to the Site</h1>
+        {{-- <a href="{{ route('logout') }}">Logout</a> --}}
+        <form action="{{ route('/logout') }}">
+            @csrf
+            <button type="submit" class="btn btn-danger">
+                Logout
+            </button>
+        </form>
+    </div>
 @endsection
